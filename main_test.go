@@ -37,3 +37,24 @@ func TestSuma(t *testing.T) {
 		}
 	}
 }
+
+//funcion de prueba a MayorMenor
+func TestMayorMenor(t *testing.T) {
+	casosMayorMenor := []struct {
+		valorx            int
+		valory            int
+		resultadoEsperado int
+	}{
+		{2, 1, 2},
+		{56, 2, 56},
+		{90, 200, 200},
+	}
+
+	for _, valor := range casosMayorMenor {
+		mayor := MayorMenor(valor.valorx, valor.valory)
+		if mayor != valor.resultadoEsperado {
+			t.Errorf("Failed: Incorrect compare, got %d expected %d", mayor, valor.resultadoEsperado)
+		}
+
+	}
+}
