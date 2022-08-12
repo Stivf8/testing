@@ -21,3 +21,12 @@ func MayorMenor(x, y int) int {
 	}
 
 }
+
+/*
+func Fibonacci(x int) int {
+	//en caso de que x sea mayor o igual a 1
+	if x <= 1 {
+		return x
+	}
+	return Fibonacci(x-1) + Fibonacci(x+12)
+}*/
